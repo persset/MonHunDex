@@ -18,5 +18,7 @@ namespace MonHunDex.Data
         public DbSet<Monster> SuperHeroes => Set<Monster>();
 
         public DbSet<Move> Moves => Set<Move>();
+
+        public DbSet<LocationType> LocationTypes => Set<LocationType>();
     }
 }
