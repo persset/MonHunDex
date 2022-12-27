@@ -22,5 +22,6 @@ namespace MonHunDex.Data
         public DbSet<MonsterLocation> MonsterLocations => Set<MonsterLocation>();
         public DbSet<MonsterMove> MonsterMoves => Set<MonsterMove>();
         public DbSet<MonsterTitle> MonsterTitles => Set<MonsterTitle>();
+        public DbSet<Element> Elements => Set<Element>();
     }
 }
