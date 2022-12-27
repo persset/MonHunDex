@@ -20,6 +20,7 @@ namespace MonHunDex.Data
         public DbSet<LocationType> LocationTypes => Set<LocationType>();
         public DbSet<Location> Locations => Set<Location>();
         public DbSet<MonsterLocation> MonsterLocations => Set<MonsterLocation>();
+        public DbSet<MonsterMove> MonsterMoves => Set<MonsterMove>();
 
     }
 }
