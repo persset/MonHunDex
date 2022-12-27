@@ -7,6 +7,7 @@
         public string Description { get; set; } = string.Empty;
         public string Physiology { get; set; } = string.Empty;
         public string Behavior { get; set; } = string.Empty;
-        public virtual ICollection<MonsterLocation> MonsterLocations { get; set; }
+        public ICollection<MonsterLocation> MonsterLocations { get; set; }
+        public ICollection<MonsterElement> MonsterElements { get; set; }
     }
 }

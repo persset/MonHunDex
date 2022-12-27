@@ -9,6 +9,13 @@ namespace MonHunDex.Data
         {
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<MonsterElement>().HasKey(me => new {me.ElementId, me.MonsterId});
+            modelBuilder.Entity<MonsterElement>().HasOne(me => me.Monster).WithMany(m => m.MonsterElements).HasForeignKey(me => me.MonsterId);
+            modelBuilder.Entity<MonsterElement>().HasOne(me => me.Element).WithMany(e => e.MonsterElements).HasForeignKey(me => me.ElementId);
+            }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
@@ -23,5 +30,6 @@ namespace MonHunDex.Data
         public DbSet<MonsterMove> MonsterMoves => Set<MonsterMove>();
         public DbSet<MonsterTitle> MonsterTitles => Set<MonsterTitle>();
         public DbSet<Element> Elements => Set<Element>();
+        public DbSet<MonsterElement> MonsterElements => Set<MonsterElement>();
     }
 }
