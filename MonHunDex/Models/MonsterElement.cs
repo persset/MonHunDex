@@ -6,5 +6,6 @@
         public int ElementId { get; set; }
         public Monster Monster { get; set; }
         public Element Element { get; set; }
+
     }
 }
