@@ -38,5 +38,6 @@ namespace MonHunDex.Data
         public DbSet<Ailment> Ailments => Set<Ailment>();
         public DbSet<MonsterAilment> MonsterAilments => Set<MonsterAilment>();
         public DbSet<MonsterClass> MonsterClasses => Set<MonsterClass>();
+        public DbSet<Behavior> Behaviors => Set<Behavior>();
     }
 }
