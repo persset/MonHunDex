@@ -9,5 +9,6 @@
         public string Behavior { get; set; } = string.Empty;
         public ICollection<MonsterLocation> MonsterLocations { get; set; }
         public ICollection<MonsterElement> MonsterElements { get; set; }
+        public ICollection<MonsterAilment> MonsterAilments { get; set; }
     }
 }
