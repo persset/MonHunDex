@@ -2,11 +2,9 @@
 {
     public class MonsterLocation
     {
-        public int ID { get; set; }
-        public int MonsterID { get; set; }
-        public int LocationID { get; set; }
-
-        public virtual Monster Monster { get; set; }
-        public virtual Location Location { get; set; }
+        public int MonsterId { get; set; }
+        public Monster Monster { get; set; }
+        public int LocationId { get; set; }
+        public Location Location {get; set; }
     }
 }

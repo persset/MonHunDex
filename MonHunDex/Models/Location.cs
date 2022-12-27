@@ -6,7 +6,7 @@
         public string Name { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
         public string Geography { get; set; } = string.Empty;
-        public virtual LocationType LocationType { get; set; } = new LocationType();
-        public virtual ICollection<MonsterLocation> MonsterLocations { get; set; }
+        public LocationType LocationType { get; set; } = new LocationType();
+        public ICollection<MonsterLocation> MonsterLocations { get; set; }
     }
 }
