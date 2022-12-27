@@ -22,6 +22,10 @@ namespace MonHunDex.Data
             modelBuilder.Entity<MonsterLocation>().HasKey(ml => new { ml.LocationId, ml.MonsterId });
             modelBuilder.Entity<MonsterLocation>().HasOne(ml => ml.Monster).WithMany(m => m.MonsterLocations).HasForeignKey(ml => ml.MonsterId);
             modelBuilder.Entity<MonsterLocation>().HasOne(ml => ml.Location).WithMany(l => l.MonsterLocations).HasForeignKey(ml => ml.LocationId);
+
+            modelBuilder.Entity<MonsterMove>().HasKey(mm => new { mm.MoveId, mm.MonsterId });
+            modelBuilder.Entity<MonsterMove>().HasOne(mm => mm.Monster).WithMany(m => m.MonsterMoves).HasForeignKey(mm => mm.MonsterId);
+            modelBuilder.Entity<MonsterMove>().HasOne(mm => mm.Move).WithMany(m => m.MonsterMoves).HasForeignKey(mm => mm.MoveId);
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
