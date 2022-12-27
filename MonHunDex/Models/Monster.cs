@@ -8,6 +8,8 @@
         public string Physiology { get; set; } = string.Empty;
         public int BehaviorId { get; set; }
         public Behavior Behavior { get; set; }
+        public int MonsterClassId { get; set; }
+        public MonsterClass MonsterClass { get; set; }
         public ICollection<MonsterLocation> MonsterLocations { get; set; }
         public ICollection<MonsterElement> MonsterElements { get; set; }
         public ICollection<MonsterAilment> MonsterAilments { get; set; }
