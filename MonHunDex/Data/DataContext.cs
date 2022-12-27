@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿global using Microsoft.EntityFrameworkCore;
 using MonHunDex.Models;
 
 namespace MonHunDex.Data
@@ -38,7 +38,7 @@ namespace MonHunDex.Data
             optionsBuilder.UseSqlServer("Server=.\\SQLExpress;Database=monhundex;Trusted_Connection=true;TrustedServerCertificate=true;");
         }
 
-        public DbSet<Monster> SuperHeroes => Set<Monster>();
+        public DbSet<Monster> Monsters => Set<Monster>();
         public DbSet<Move> Moves => Set<Move>();
         public DbSet<LocationType> LocationTypes => Set<LocationType>();
         public DbSet<Location> Locations => Set<Location>();
