@@ -26,6 +26,10 @@ namespace MonHunDex.Data
             modelBuilder.Entity<MonsterMove>().HasKey(mm => new { mm.MoveId, mm.MonsterId });
             modelBuilder.Entity<MonsterMove>().HasOne(mm => mm.Monster).WithMany(m => m.MonsterMoves).HasForeignKey(mm => mm.MonsterId);
             modelBuilder.Entity<MonsterMove>().HasOne(mm => mm.Move).WithMany(m => m.MonsterMoves).HasForeignKey(mm => mm.MoveId);
+
+            modelBuilder.Entity<MonsterWeakness>().HasKey(mw => new { mw.MonsterId, mw.ElementId });
+            modelBuilder.Entity<MonsterWeakness>().HasOne(mw => mw.Monster).WithMany(m => m.MonsterWeaknesses).HasForeignKey(mw => mw.MonsterId);
+            modelBuilder.Entity<MonsterWeakness>().HasOne(mw => mw.Element).WithMany(e => e.MonsterWeaknesses).HasForeignKey(mw => mw.ElementId);
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -47,5 +51,6 @@ namespace MonHunDex.Data
         public DbSet<MonsterAilment> MonsterAilments => Set<MonsterAilment>();
         public DbSet<MonsterClass> MonsterClasses => Set<MonsterClass>();
         public DbSet<Behavior> Behaviors => Set<Behavior>();
+        public DbSet<MonsterWeakness> MonsterWeaknesses => Set<MonsterWeakness>();
     }
 }

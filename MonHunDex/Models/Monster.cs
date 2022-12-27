@@ -14,5 +14,6 @@
         public ICollection<MonsterElement> MonsterElements { get; set; }
         public ICollection<MonsterAilment> MonsterAilments { get; set; }
         public ICollection<MonsterMove> MonsterMoves { get; set; }
+        public ICollection<MonsterWeakness> MonsterWeaknesses { get; set; }
     }
 }
