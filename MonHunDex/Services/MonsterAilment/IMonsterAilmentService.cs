@@ -1,6 +1,6 @@
 ﻿namespace MonHunDex.Services.MonsterAilments
 {
-    public interface IMonsterAilments
+    public interface IMonsterAilmentService
     {
         Task<List<Models.MonsterAilment>> GetAllMonsterAilments();
         Task<Models.MonsterAilment?> GetSingleMonsterAilment(int id);
