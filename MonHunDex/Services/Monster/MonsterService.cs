@@ -15,7 +15,7 @@ namespace MonHunDex.Services.Monster
         {
             dataContext.Monsters.Add(monster);
             
-            var id = await dataContext.SaveChangesAsync();
+            await dataContext.SaveChangesAsync();
 
             return monster;
         }
