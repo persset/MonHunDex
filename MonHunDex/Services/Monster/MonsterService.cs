@@ -20,7 +20,7 @@ namespace MonHunDex.Services.Monster
             return monster;
         }
 
-        async Task<Models.Monster> IMonsterService.DeleteMonster(int id)
+        async Task<Models.Monster?> IMonsterService.DeleteMonster(int id)
         {
             var monster = await dataContext.Monsters.FindAsync(id);
             
@@ -47,7 +47,7 @@ namespace MonHunDex.Services.Monster
             return monster;
         }
 
-        async Task<Models.Monster> IMonsterService.UpdateMonster(int id, Models.Monster request)
+        async Task<Models.Monster?> IMonsterService.UpdateMonster(int id, Models.Monster request)
         {
             var monster = await dataContext.Monsters.FindAsync(id);
 
