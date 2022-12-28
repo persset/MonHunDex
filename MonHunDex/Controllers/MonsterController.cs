@@ -47,5 +47,16 @@ namespace MonHunDex.Controllers
 
             return Ok(result);
         }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<Monster>> DeleteMonster(int id)
+        {
+            var result = await monsterService.DeleteMonster(id);
+
+            if (result is null)
+                return NotFound("Monster to delete not found");
+
+            return Ok(result);
+        }
     }
 }
