@@ -17,12 +17,13 @@ namespace MonHunDex.Services.Monster
             
             var id = await dataContext.SaveChangesAsync();
 
-            return await dataContext.Monsters.FindAsync(id);
+            return monster;
         }
 
         async Task<Models.Monster> IMonsterService.DeleteMonster(int id)
         {
             var monster = await dataContext.Monsters.FindAsync(id);
+            
             if (monster is null)
                 return null;
 
@@ -61,7 +62,7 @@ namespace MonHunDex.Services.Monster
             
             await dataContext.SaveChangesAsync();
 
-            return await dataContext.Monsters.FindAsync(id);
+            return monster;
         }
     }
 }
