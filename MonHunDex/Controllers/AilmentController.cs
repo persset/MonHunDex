@@ -4,6 +4,8 @@ using MonHunDex.Services.Ailment;
 
 namespace MonHunDex.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class AilmentController : ControllerBase
     {
         private readonly IAilmentService ailmentService;
