@@ -35,7 +35,7 @@ namespace MonHunDex.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseSqlServer("Server=.\\SQLExpress;Database=monhundex;Trusted_Connection=true;TrustedServerCertificate=true;");
+            optionsBuilder.UseSqlServer("Server=.\\SQLExpress;Database=monhundex;Trusted_Connection=true;TrustServerCertificate=true;");
         }
 
         public DbSet<Monster> Monsters => Set<Monster>();
