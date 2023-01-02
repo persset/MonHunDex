@@ -240,9 +240,6 @@ namespace MonHunDex.Migrations
                     b.Property<int>("MonsterId")
                         .HasColumnType("int");
 
-                    b.Property<int>("Id")
-                        .HasColumnType("int");
-
                     b.HasKey("MoveId", "MonsterId");
 
                     b.HasIndex("MonsterId");
