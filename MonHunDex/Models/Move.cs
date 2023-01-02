@@ -6,6 +6,6 @@
         public string Name { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
 
-        public ICollection<MonsterMove> MonsterMoves { get; set; }
+        public ICollection<MonsterMove>? MonsterMoves { get; set; }
     }
 }

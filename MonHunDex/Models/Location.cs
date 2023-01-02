@@ -8,6 +8,6 @@
         public string Geography { get; set; } = string.Empty;
         public int LocationTypeId { get; set; }
         public LocationType LocationType { get; set; } = new LocationType();
-        public ICollection<MonsterLocation> MonsterLocations { get; set; }
+        public ICollection<MonsterLocation>? MonsterLocations { get; set; }
     }
 }

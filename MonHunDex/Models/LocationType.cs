@@ -4,6 +4,6 @@
     {
         public int Id { get; set; }
         public string Type { get; set; } = string.Empty;
-        public ICollection<Location> Locations { get; set; } = new List<Location>();
+        public ICollection<Location>? Locations { get; set; }
     }
 }
