@@ -59,6 +59,7 @@ namespace MonHunDex.Services.Monster
             monster.Physiology = request.Physiology;
             monster.BehaviorId = request.BehaviorId;
             monster.MonsterClassId = request.MonsterClassId;
+            monster.IconUrl = request.IconUrl;
             
             await dataContext.SaveChangesAsync();
 
